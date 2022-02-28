@@ -8,8 +8,7 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "*.c",
-                "/Users/eryilmaz/Desktop/printf/libft/*.c",
-                //"${file}",
+                "libft.a",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
