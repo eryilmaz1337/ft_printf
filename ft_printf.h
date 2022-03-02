@@ -15,14 +15,15 @@
 # include <stdarg.h>
 
 char	sec(int gelenascii);
-char	SEC(int gelenascii);
+char	secb(int gelenascii);
 
 int		ft_printf(const	char *str, ...);
 
-size_t	uzun(size_t bolum);
+size_t	uzun(unsigned long bolum);
 size_t	onluuzun(unsigned int bolum);
 
-char	*hexdesimal(unsigned long sayi, int anahtar, size_t uzunluk, char *kalan);
+char	*hexdesimal(size_t sayi, size_t uzunluk, char *kalan);
+char	*hexdesimalxx(size_t sayi, int anahtar, size_t uzunluk, char *kalan);
 
 size_t	dogalsayilar(unsigned int n);
 #endif

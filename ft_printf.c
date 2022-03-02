@@ -6,7 +6,7 @@
 /*   By: eryilmaz <eryilmaz@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:38:42 by eryilmaz          #+#    #+#             */
-/*   Updated: 2022/03/01 18:17:16 by eryilmaz         ###   ########.tr       */
+/*   Updated: 2022/03/02 13:52:44 by eryilmaz         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -19,13 +19,13 @@ size_t	yazdirmadevam(va_list liste, char tip)
 	a = NULL;
 	uz = 0;
 	if (tip == 'p')
-		a = hexdesimal(va_arg(liste, unsigned long), 2, 0, NULL);
+		a = hexdesimal(va_arg(liste, unsigned long), 0, NULL);
 	else if (tip == 'u')
 		return (dogalsayilar(va_arg(liste, unsigned int)));
 	else if (tip == 'X')
-		a = hexdesimal(va_arg(liste, unsigned int), 1, 0, NULL);
+		a = hexdesimalxx(va_arg(liste, unsigned int), 1, 0, NULL);
 	else if (tip == 'x')
-		a = hexdesimal(va_arg(liste, unsigned int), 0, 0, NULL);
+		a = hexdesimalxx(va_arg(liste, unsigned int), 0, 0, NULL);
 	else if (tip == '%')
 	{
 		ft_putchar_fd('%', 1);
